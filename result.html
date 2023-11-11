@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <table>
+        <tr>
+            <th>Offer</th>
+            <th>Retailer</th>
+            <th>Brand</th>
+            <th>Product Category</th>
+            <th>Similarity Score</th>
+        </tr>
+        {% for offer in offers.values %}
+            <tr>
+                <td>{{ offer['OFFER'] }}</td>
+                <td>{{ offer['RETAILER'] }}</td>
+                <td>{{ offer['BRAND'] }}</td>
+                <td>{{ offer['PRODUCT_CATEGORY'] }}</td>
+                <td>{{ offer['similarity_score'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
